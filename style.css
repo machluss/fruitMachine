@@ -1,0 +1,153 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.wrap {
+ width: 80%;
+ max-width: 850px;
+ height: 100vh;
+ margin: 0 auto ;
+ padding: 20px;
+ border: 2px solid #333;
+
+ display: flex;
+ flex-direction: column;
+ 
+ font-family: 'open sans', roboto, sans-serif; 
+}
+
+h1 {
+ text-align: center;
+ text-transform: uppercase;
+ margin-top: 3vh;
+}
+.game {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-grow: 1;
+
+ margin-bottom: 2vh;
+
+}
+.game div {
+ height: 80%;
+ border: 3px solid gray;
+
+ flex-basis: 30%;
+
+ transition: .3s;
+}
+
+.play {
+ text-align: center;
+ flex-basis: 10vh;
+
+}
+
+.play input{
+ /* height: 90px; */
+ font-size: 40px;
+ padding: 20px;
+ width: 400px;
+ border: 3px solid black;
+ text-align: center;
+}
+.play button {
+ width: 40%;
+ height:90px;
+ text-align: center;
+ padding: 20px 60px;
+ font-size: 40px;
+ text-transform: uppercase;
+ background-color: #333;
+ border: none;
+ color: white;
+ cursor: pointer;
+ letter-spacing: 6px;
+}
+
+.panel {
+ flex-basis: 5vh;
+ margin: 40px 0;
+ font-size: 26px;
+}
+
+.panel, .score {
+ font-size: 26px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score>div {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 10px;
+} 
+
+.panel span, .score span, .result {
+ font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+ .wrap {
+ width: 90%;
+ }
+ .play input{
+  width: 80%;
+  height: 70px;
+  font-size: 30px;
+  display: block;
+  margin: 20px auto;
+
+ }
+ .play button {
+  width: 80%;
+  height: 74px;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 20px ;
+ }
+
+}
+
+@media (max-width:540px) {
+    .play input{
+        width: 80%;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 10px;
+       }
+
+       .play button {
+        width: 60%;
+        height: 50px;
+        font-size: 20px;
+       }
+
+       .game {
+           margin-bottom: 0;
+       }
+
+       .panel {
+           text-align: center;
+       }
+
+       .score>div {
+           flex-direction: column;
+       }
+
+       .wrap>h1 {
+           margin-top: 0;
+           font-size: 24px;
+       }
+}
